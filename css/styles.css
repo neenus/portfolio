@@ -1,0 +1,149 @@
+/* Navigation bar and header start */
+header {
+  background: black;
+}
+
+.nav-wrapper  {
+  max-width: 85%;
+  /* background: black; */
+  margin: 0 auto;
+  position: relative;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  /* position: fixed; */
+  top: 0;
+}
+
+nav.nav-wrapper .logo a {
+  font-size: 1.75rem;
+}
+
+.nav-wrapper .menu li {
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 0;
+
+}
+
+.nav-wrapper a {
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav.nav-wrapper ul li a {
+  border-bottom: 1px solid transparent;
+  /* padding-bottom: 3px; */
+  transition: 0.5s;
+}
+nav.nav-wrapper ul li a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.cover-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('../images/hero-bg.jpg') no-repeat right bottom / cover;
+  height: 100vh;
+}
+
+.profile-img img{
+  max-inline-size: 200px;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  /* margin: 10rem auto; */
+}
+
+#info .layer {
+  font-size: 3rem;
+  padding: 15px 0;
+  color: white;
+  text-align: center;
+}
+
+#info .layer.btn.btn-main {
+  margin-top: 100px;
+}
+
+
+.contact-btn {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Skill section style start */
+
+#skills {
+  background: rgb(252, 252, 252);
+  padding-top: 3.5rem;
+  height: 100vh;
+}
+h2.sub-title {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+h2.sub-title::after {
+  display: block;
+  height: 3px;
+  background-color: black;
+  content: "";
+  width: 225px;
+  margin: 30px auto 0 auto
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #ebecec;
+  background: white;
+  border-radius: 6px;
+  min-inline-size: 10.5rem;
+  height: 8rem;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.card i {
+  font-size: 3.5rem;
+}
+
+
+
+.skill-name {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+}
+/* Skill section style end */
