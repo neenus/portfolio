@@ -241,6 +241,139 @@ section.about span {
 
 /* About me section style end */
 
+/* Contact form style start */
+
+/* button.min-btn {
+  color: white
+} */
+#contact-form {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 25%;
+  z-index: 6;
+  background: rgba(250, 250, 250, 0.75);
+  padding: 15px;
+  border-radius: 6px;
+}
+
+#contact-form p {
+  text-align: center;
+  padding: 25px;
+  margin: 0 auto;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 15px;
+  color: white;
+  background: darkblue;
+  min-width: 50px;
+  text-align: center;
+  height: 45px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.input-field:focus {
+  border: 2px solid darkblue;
+}
+
+#contact-form textarea {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.submit-btn {
+  color: white;
+  background: darkblue;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2rem;
+  opacity: 0.75;  
+  transition: 0.5s;
+}
+
+.submit-btn:hover {
+  opacity: 1;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+/* Contact form style end */
+
+/* contact form show on click */
+
+.main-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 5;
+  display: none;
+}
+
+.main-overlay::after {
+  background: url(../images/close-icon.svg) no-repeat center / cover;
+  width: 35px;
+  height: 35px;
+  display: block;
+  content: "";
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+}
+
+body.contact-form-active .main-overlay {
+  display: block;
+}
+
+body.contact-form-active #contact-form {
+  display: block;
+}
+
+/* Contact form end */
+/* ============================================= */
+
+/* portfolio section start */
+
+#portfolio {
+  padding-top: 3.5rem;
+}
+
+.card-container img {
+  height: 75px;
+  width: 85%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+
+/* portfolio section end */
+/* ============================================= */
+
 /* Responsive menu start */
 
 @media only screen and (max-width: 768px) {
@@ -254,29 +387,6 @@ section.about span {
     right: 10px;
     top: 15px;
     /* transition: 1s; */
-  }
-
-  .main-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.72);
-    z-index: 5;
-    display: none;
-  }
-
-  .main-overlay::after {
-		background: url(../images/close-icon.svg) no-repeat center / cover;
-		width: 35px;
-		height: 35px;
-		display: block;
-		content: "";
-		position: fixed;
-		top: 10px;
-		right: 10px;
-		z-index: 20;
   }
   
   ul.menu {
@@ -324,5 +434,13 @@ section.about span {
 
   body.active-menu header.sticky {
     display: none;
+  }
+
+  body.contact-form-active .menu-trigger {
+    display: none;
+  }
+
+  body.contact-form-active .main-overlay {
+    display: block
   }
 }
