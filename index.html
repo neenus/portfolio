@@ -21,6 +21,7 @@
   <script src="main.js"></script>
 </head>
 <body>
+  <div class="main-overlay js-main-overlay"></div>
   <section class="cover-main" id="home">
     <header>
       <nav class="nav-wrapper">
@@ -28,25 +29,23 @@
           <a class="logo" href="#">Neenus Gabriel</a>
         </div>
         <ul class="menu">
-          <li><a href="#">Home</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About Me</a></li>
           <li><a href="#">My Work</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Skills</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
+      <div class="menu-trigger js-menu-trigger"></div>
     </header>
 
     <div class="wrapper" id="info">
-      <!-- <div class="profile-img">
-        <img src="/images/profile.png" alt="">
-      </div> -->
       <ul>
         <li class="layer profile-img">
           <img src="images/profile.png" alt="">
         </li>
         <li class="layer name">Neenus Gabriel</li>
-        <li class="layer title"> Front-End Developer</li>
+        <li class="layer title"> Web Developer</li>
         <li class="layer btn btn-main">
           <a href="#" class="contact-btn">Get in Touch</a>
         </li>
@@ -158,8 +157,26 @@
     </div>
   </section>
 
+  <section class="about" id="about">
+    <div class="wrapper">
+      <h2 class="sub-title">About Me</h2>
+      <p class="bio">
+        Web Developer who changed direction in life and left my position as a Corporate Accountant in order to pursue my long-time passion for coding. My ten years of experience as a public accountant allowed me to develop my communication and problem-solving skills as I was working in very fast-paced, deadline driven, team environments while providing advice to clients and coworkers. I have now taken these skills and I'm hoping to apply them to the Web Development world. I am passionate about front-end development and working with HTML, CSS and ReactJS.
+      </p>
+      <div class="beating-heart">
+        <span>I</span>
+        <svg class="heart" viewBox="0 0 32 29.6">
+          <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"></path>
+        </svg>
+        <span>Web Development</span>
+      </div>
+    </div>
+    
+  </section>
+
   <!-- JS links -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="scripts/main.js"></script>
-  <script src="scripts/masonry.pkgd.min.js"></script>
 </body>
 </html>

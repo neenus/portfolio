@@ -1,6 +1,21 @@
 /* Navigation bar and header start */
 header {
   background: black;
+  
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-200%);
+  transition: 0.5s;
+  opacity: 0.65;
+}
+
+body.scroll header.sticky {
+  transform: translateY(0);
 }
 
 .nav-wrapper  {
@@ -89,9 +104,9 @@ nav.nav-wrapper ul li a:hover {
 /* Skill section style start */
 
 #skills {
-  background: rgb(252, 252, 252);
+  background: rgb(250, 250, 250);
   padding-top: 3.5rem;
-  height: 100vh;
+  /* height: 100vh; */
 }
 h2.sub-title {
   position: relative;
@@ -114,12 +129,11 @@ h2.sub-title::after {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 1rem;
   padding: 1rem;
   justify-content: center;
   align-items: center;
   width: 65%;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 .card {
@@ -134,7 +148,15 @@ h2.sub-title::after {
   height: 8rem;
   margin: 0.5rem;
   padding: 1rem;
-  flex: 1 1 calc(25% - 2rem)
+  flex: 1 1 calc(25% - 2rem);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform:translateY(-1px);
+  transform:translateY(-1px);
+  box-shadow:0 6px 25px rgba(0,0,0,.1);
+  box-shadow:0 6px 25px rgba(0,0,0,.1)
 }
 
 .card i {
@@ -148,3 +170,88 @@ h2.sub-title::after {
   font-weight: bold;
 }
 /* Skill section style end */
+/* ======================================== */
+/* About me section style start */
+
+
+
+#about {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/hero-bg\ 2.jpg) no-repeat right bottom / cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.5rem;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  
+}
+
+#about h2.sub-title::after {
+  background-color: white;
+  margin-bottom: 70px;
+}
+
+.bio {
+  margin: 3rem 5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  background: rgba(248, 248, 248, 0.1);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+section.about span {
+  font-size: 3rem;
+  line-height: 3.2rem;
+}
+
+.beating-heart {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+  position: relative;
+  fill: red;
+  width: 70px;
+  margin: 0 1.5rem;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  35% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* About me section style end */
+
+/* Responsive menu start */
+
+@media only screen and (max-width: 768px) {
+  .menu-trigger {
+    background: url(../images/menu.png)
+    width: 35px;
+    height: 35px;
+    display: block;
+    z-index: 10;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}
