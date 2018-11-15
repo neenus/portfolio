@@ -245,7 +245,7 @@ section.about span {
 
 @media only screen and (max-width: 768px) {
   .menu-trigger {
-    background: url(../images/menu.png)
+    background: url(../images/hamburger-icon.svg) no-repeat center / cover;
     width: 35px;
     height: 35px;
     display: block;
@@ -253,5 +253,76 @@ section.about span {
     position: absolute;
     right: 10px;
     top: 15px;
+    /* transition: 1s; */
+  }
+
+  .main-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 5;
+    display: none;
+  }
+
+  .main-overlay::after {
+		background: url(../images/close-icon.svg) no-repeat center / cover;
+		width: 35px;
+		height: 35px;
+		display: block;
+		content: "";
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 20;
+  }
+  
+  ul.menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #131313;
+    width: 100%;
+    max-width: 300px;
+    z-index: 30;
+    transform: translate3d(-100%, 0, 0);
+    transition: 0.3s;
+  }
+
+  nav.nav-wrapper ul.menu li {
+    display: block;
+    margin-top: 35px;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  nav.nav-wrapper ul.menu li {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  nav.nav-wrapper ul.menu li a:hover {
+    border: transparent
+  }
+
+  body.active-menu ul.menu {
+    transform: translate3d(0, 0, 0);
+    display: block;
+    padding: 0 15px;
+  }
+
+  body.active-menu .main-overlay {
+    display: block;
+  }
+
+  body.active-menu .menu-trigger {
+    display: none;
+  }
+
+  body.active-menu header.sticky {
+    display: none;
   }
 }
