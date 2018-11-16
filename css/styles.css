@@ -259,7 +259,7 @@ section.about span {
   background: rgba(250, 250, 250, 0.75);
   padding: 15px;
   border-radius: 6px;
-  transform: translatey(200%);
+  transform: translatey(300%);
   transition: 1s;
 }
 
@@ -591,6 +591,10 @@ body.contact-form-active #contact-form {
   
   #info ul li.title {
     font-size: 2rem;
+  }
+
+  #info .layer.btn.btn-main {
+    margin: 60px;
   }
   
   .bio {
