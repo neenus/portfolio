@@ -83,6 +83,10 @@ nav.nav-wrapper ul li a:hover {
   text-align: center;
 }
 
+#info ul li.title {
+  font-size: 2.5rem;
+}
+
 #info .layer.btn.btn-main {
   margin-top: 100px;
 }
@@ -378,6 +382,11 @@ body.contact-form-active #contact-form {
   margin-bottom: 10px;
 }
 
+.portfolio-name {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+}
+
 
 /* portfolio section end */
 /* ============================================= */
@@ -496,4 +505,129 @@ body.contact-form-active #contact-form {
     display: none;
   }
 
+}
+
+@media only screen and (max-width: 665px) {
+  .card-container {
+    width: 70%;
+  }
+
+  #contact-form {
+    margin: 0 15%;
+  }
+
+  .bio {
+    margin: 2rem 2rem;
+    background: rgba(100, 100, 100, 0.9);
+  }
+}
+
+@media only screen and (max-width: 585px) {
+  .heart {
+    width: 60px;
+  }
+
+  .card-container {
+    width: 75%;
+  }
+  section.about span {
+    font-size: 2rem;
+  }
+  /* .card-container img {
+    height: 70px;
+  }
+  .portfolio-name {
+    font-size: 14px;
+  } */
+}
+
+@media only screen and (max-width: 550px) {
+  
+  #contact-form {
+    margin: 0 10%;
+  }
+
+  .bio {
+    margin: 1rem 1rem;
+  }
+  .card-container {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  
+  #about {
+    padding-top: 2rem;
+  }
+  
+  #about h2.sub-title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  #about h2.sub-title::after {
+    margin-bottom: 40px;
+  }
+  
+  .bio {
+    font-size: 1.2rem;
+  }
+
+  section.about span {
+    font-size: 1.75rem;
+  }
+
+  .heart {
+    width: 55px;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  
+  #info .layer {
+    font-size: 2.5rem;
+  }
+  
+  #info ul li.title {
+    font-size: 2rem;
+  }
+  
+  .bio {
+    font-size: 1.1rem;
+  }
+
+  section.about span {
+    font-size: 1.5rem;
+  }
+
+  .heart {
+    width: 45px;
+  }
+
+  #footer {
+    height: 65px;
+  }
+  #footer .container {
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    margin: 5px;
+  }
+
+  body.contact-form-active #contact-form {
+    transform: translateY(-12%);
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .bio {
+    /* margin: 0rem 1rem; */
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+
+  .heart {
+    width: 40px;
+  }
 }
