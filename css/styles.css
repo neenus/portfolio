@@ -483,12 +483,17 @@ body.contact-form-active #contact-form {
     display: none;
   }
 
-  /* body.active-menu header.sticky {
-    display: none;
-  } */
+  body.contact-form-active #contact-form {
+    display: block;
+    transform: translatey(-10%)
+  }
 
-  /* body.contact-form-active .menu-trigger {
+  body.active-menu header.sticky {
     display: none;
-  } */
+  }
+
+  body.contact-form-active .menu-trigger {
+    display: none;
+  }
 
 }
