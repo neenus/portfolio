@@ -12,6 +12,7 @@ header.sticky {
   transform: translateY(-200%);
   transition: 0.5s;
   opacity: 0.65;
+  z-index: 4;
 }
 
 body.scroll header.sticky {
@@ -106,7 +107,7 @@ nav.nav-wrapper ul li a:hover {
 #skills {
   background: rgb(250, 250, 250);
   padding-top: 3.5rem;
-  /* height: 100vh; */
+  height: 100%;
 }
 h2.sub-title {
   position: relative;
