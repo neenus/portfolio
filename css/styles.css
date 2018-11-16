@@ -172,9 +172,8 @@ h2.sub-title::after {
 }
 /* Skill section style end */
 /* ======================================== */
+
 /* About me section style start */
-
-
 
 #about {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/hero-bg\ 2.jpg) no-repeat right bottom / cover;
@@ -241,14 +240,12 @@ section.about span {
 }
 
 /* About me section style end */
+/* ======================================== */
 
 /* Contact form style start */
 
-/* button.min-btn {
-  color: white
-} */
 #contact-form {
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 20%;
   left: 0;
@@ -258,6 +255,8 @@ section.about span {
   background: rgba(250, 250, 250, 0.75);
   padding: 15px;
   border-radius: 6px;
+  transform: translatey(200%);
+  transition: 1s;
 }
 
 #contact-form p {
@@ -320,8 +319,6 @@ section.about span {
   font-weight: bold;
 }
 
-/* Contact form style end */
-
 /* contact form show on click */
 
 .main-overlay {
@@ -332,27 +329,36 @@ section.about span {
   bottom: 0;
   background: rgba(0, 0, 0, 0.72);
   z-index: 5;
-  display: none;
+  /* display: none; */
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 .main-overlay::after {
   background: url(../images/close-icon.svg) no-repeat center / cover;
   width: 35px;
-  height: 35px;
+  height: 0px;
   display: block;
   content: "";
   position: fixed;
   top: 10px;
-  right: 10px;
+  right: 25px;
   z-index: 20;
 }
 
 body.contact-form-active .main-overlay {
-  display: block;
+  opacity: 1;
+  height: auto;
+}
+
+body.contact-form-active .main-overlay::after {
+  height: 35px;
 }
 
 body.contact-form-active #contact-form {
   display: block;
+  transform: translatey(0)
 }
 
 /* Contact form end */
@@ -362,6 +368,7 @@ body.contact-form-active #contact-form {
 
 #portfolio {
   padding-top: 3.5rem;
+  height: 80vh;
 }
 
 .card-container img {
@@ -375,6 +382,44 @@ body.contact-form-active #contact-form {
 /* portfolio section end */
 /* ============================================= */
 
+/* Footer start */
+
+#footer {
+  position: fixed;
+  bottom: 0;  
+  right: 0;
+  left: 0;
+  background: black;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#footer .container {
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #666;
+}
+
+#footer span {
+  font-size: 18px;
+}
+
+#footer i {
+  margin-right: 0.35rem;
+  color: white;
+}
+
+#footer i:hover {
+  color: rgb(133, 102, 161)
+}
+
+/* Footer end */
+/* ============================================= */
+
 /* Responsive menu start */
 
 @media only screen and (max-width: 768px) {
@@ -385,9 +430,8 @@ body.contact-form-active #contact-form {
     display: block;
     z-index: 10;
     position: absolute;
-    right: 10px;
+    right: 25px;
     top: 15px;
-    /* transition: 1s; */
   }
   
   ul.menu {
@@ -397,10 +441,10 @@ body.contact-form-active #contact-form {
     left: 0;
     background: #131313;
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
     z-index: 30;
     transform: translate3d(-100%, 0, 0);
-    transition: 0.3s;
+    transition: 0.5s;
   }
 
   nav.nav-wrapper ul.menu li {
@@ -426,22 +470,25 @@ body.contact-form-active #contact-form {
   }
 
   body.active-menu .main-overlay {
-    display: block;
+    height: auto;
+    opacity: 1;
+    height: auto;
+  }
+
+  body.active-menu .main-overlay::after {
+    height: 35px;
   }
 
   body.active-menu .menu-trigger {
     display: none;
   }
 
-  body.active-menu header.sticky {
+  /* body.active-menu header.sticky {
     display: none;
-  }
+  } */
 
-  body.contact-form-active .menu-trigger {
+  /* body.contact-form-active .menu-trigger {
     display: none;
-  }
+  } */
 
-  body.contact-form-active .main-overlay {
-    display: block
-  }
 }
