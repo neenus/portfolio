@@ -87,6 +87,32 @@ nav.nav-wrapper ul li a:hover {
   font-size: 2.5rem;
 }
 
+.typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid orange;
+  box-sizing: border-box;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation:
+    typing 3s steps(20, end),
+    blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
 #info .layer.btn.btn-main {
   margin-top: 100px;
 }
