@@ -20,7 +20,7 @@ $(document).ready(function(){
     } 
   });
 
-  $('.logo a[href^="#').on('click', function(e) {
+  $('.logo a[href^="#"]').on('click', function(e) {
     e.preventDefault();
     let target = $(this.hash);
     if (target.length) {
