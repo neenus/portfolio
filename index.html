@@ -175,20 +175,20 @@
 
   <!-- contact form -->
 
-  <form id="contact-form" autocomplete="off">
+  <form ction="https://formspree.io/neenus@live.ca" method="POST" id="contact-form" autocomplete="off">
     <h2 class="sub-title">Get in touch</h2>
     <p>I'd love to hear from you! Fill out the form below, or send me an email at neenus@live.ca</p>
     <div class="input-container">
       <label for="name"><i class="fas fa-user icon"></i></label>
-      <input type="text" class="input-field" placeholder="Name" name="name" id="name">
+      <input type="text" class="input-field" placeholder="Name" name="name" id="name" required autocomplete="diabled">
     </div>
     <div class="input-container">
       <label for="email"><i class="fa fa-envelope icon"></i></label>
-      <input type="email" class="input-field" placeholder="Email" name="email" id="email">
+      <input type="email" class="input-field" placeholder="Email" name="email" id="email" required autocomplete="diabled">
     </div>
     <div class="input-container">
-      <label for="telephone"><i class="fas fa-mobile-alt icon"></i></label>
-      <input type="telephone" class="input-field" placeholder="Telephone number" name="telephone" id="telephone">
+      <label for="tel"><i class="fas fa-mobile-alt icon"></i></label>
+      <input type="tel" class="input-field" placeholder="Telephone number" name="tel" id="tel" required>
     </div>
     <div class="input-container">
       <textarea name="message" id="message" placeholder="Enter your message here..."></textarea>
